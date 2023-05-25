@@ -13,6 +13,6 @@ BENCHMARK(BM_StringCopy)
   ->Repetitions(2)
   ->ThreadRange(1, 4)
   ->ComputeStatistics("test", [](const std::vector<double>& values) {
-      std::cout << counter++ << std::endl;
+      std::cout << "Id: " << counter++ << ", Size: " << values.size() << std::endl;
       return 0.0;
     });
